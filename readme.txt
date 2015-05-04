@@ -1,4 +1,4 @@
-=== wp-reel ===
+=== WP Reel ===
 Contributors: altert
 Tags: gallery, 3d, 360, slideshow, reel
 Donate link: http://altert.net/WP-Reel.html
