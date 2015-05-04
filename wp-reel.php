@@ -3,11 +3,20 @@
 Plugin Name: WP Reel
 Plugin URI: http://altert.net
 Author URI: http://altert.net
-Version: 0.8
+Version: 0.9
+Text Domain: wp-reel
+Domain Path: /lang
 Author:Alexey Tikhonov
 Description: This plugin allows to replace WP gallery with <a href="http://jquery.vostrel.cz/reel">jQuery.Reel</a> by Petr Vostřel
 
 */
+
+add_action( 'plugins_loaded', 'wp_reel_load_textdomain' );
+
+
+function wp_reel_load_textdomain() {
+  load_plugin_textdomain( 'wp-reel', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' ); 
+}
 
 add_action('wp_enqueue_scripts', 'wp_reel_scripts');
 
@@ -96,7 +105,7 @@ function reel_gallery( $output, $attr ) {
 	    'attr' => '{}',
 	    'brake' => '0.23',
 	    'clickfree' => 'false',   
-	    'cursor' => 'url("'. plugin_dir_url( __FILE__ ) .'assets/jquery.reel.cur"),hand',
+	    'cursor' => 'url("'. plugin_dir_url( __FILE__ ) .'cur/jquery.reel.cur"),hand',
 	    'cw'    => 'false',
 	    'delay' => '0',
 	    'directional' => '',
@@ -219,7 +228,7 @@ function reel_gallery( $output, $attr ) {
           }
            $revolution=max($width,$height);
           if ($vertical=="true") $horizontal="false";
-//          if (($vertical=="true")&&($cursor=='url("'. plugin_dir_url( __FILE__ ) .'assets/jquery.reel.cur"),hand')) $cursor='url("'. plugin_dir_url( __FILE__ ) .'assets/jquery.reel-vert.cur"),hand';
+//          if (($vertical=="true")&&($cursor=='url("'. plugin_dir_url( __FILE__ ) .'cur/jquery.reel.cur"),hand')) $cursor='url("'. plugin_dir_url( __FILE__ ) .'cur/jquery.reel-vert.cur"),hand';
           $output = "<img data-area='$area' data-attr='$attr' data-brake='$brake' data-clickfree='$clickfree' data-cursor='$cursor' data-cw='$cw' data-delay='$delay' data-directional='$directional' data-draggable='$draggable' data-duration='$duration' data-entry='$entry' data-footage='$footage' data-framelock='$framelock' data-graph='$graph' data-hint='$hint' data-horizontal='$horizontal' data-indicator='$indicator' data-inversed='$inversed' data-klass='$klass' data-lazyness='$lazyness' data-monitor='$monitor' data-opening='$opening' data-orbital='$orbital' data-orientable='$orientable' data-preload='$preload' data-preloader='$preloader' data-rebound='$rebound' data-responsive='$responsive' data-row='$row' data-rows='$rows' data-rowlock='$rowlock' data-scrollable='$scrollable' data-shy='$shy' data-spacing='$spacing' data-steppable='$steppable' data-tempo='$tempo' data-throwable='$throwable' data-velocity='$velocity' data-vertical='$vertical' data-wheelable='$wheelable' width='$width' height='$height'  class='reel' data-revolution='$revolution'  data-speed='$speed'  data-loops='$loops'  data-frames='$frames' data-size='$size' data-frame='$frame'  ";
           
           if ($images>1) $output.=" data-images='";
