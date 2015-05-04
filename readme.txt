@@ -1,6 +1,6 @@
 === WP Reel ===
 Contributors: altert
-Tags: gallery, 3d, 360, slideshow, reel
+Tags: gallery, 3d, 360, slideshow, reel, JQuery, animation, panorama
 Donate link: http://altert.net/WP-Reel.html
 Requires at least: 4.0.0
 Tested up to: 4.2.1
@@ -12,7 +12,7 @@ Create interactive 360° object movie, panorama or stop-motion animation from wo
 
 
 == Description ==
-WP Reel is an implementation of [JQuery Reel 360 Javascript player] (http://jquery.vostrel.cz/reel “JQuery Reel 360 Javascript player”) by [Petr Vostřel] (http://petr.vostrel.cz “Petr Vostřel”).
+WP Reel is an implementation of [JQuery Reel 360 Javascript player](http://jquery.vostrel.cz/reel/) by [Petr Vostřel](http://petr.vostrel.cz).
 
 It allows to create interactive 360° object movie, panorama or stop-motion animation from wordpress gallery.
 
@@ -21,12 +21,12 @@ It follows MIT license that is used for JQuery Reel, so feel free to download, m
 == Installation ==
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. 
 
-To replace wordpress gallery with reel you need to add reel="1" to gallery shortcode. You can also use other shortcode parameters to set JQuery Reel parameters (for parameters description see [http://jquery.vostrel.cz/reel#syntax] (http://jquery.vostrel.cz/reel#syntax "JQuery Reel Parameters")) You can also use Media options to replace all galleries with reel gallery. 
+To replace wordpress gallery with reel you need to add reel="1" to gallery shortcode. You can also use other shortcode parameters to set JQuery Reel parameters (for parameters description see [http://jquery.vostrel.cz/reel#syntax](http://jquery.vostrel.cz/reel#syntax)) You can also use Media options to replace all galleries with reel gallery. 
 
 == Screenshots ==
 
 1. Options for WP Reel (found in Media options). You can choose to replace all wordpress media galleries on site and set default speed (0 means no animation without user interaction)
-2. Options for single gallery. Reel="1" replaces gallery with reel gallery if above option was not chosen, other parameters conform to JQuery Reel parameters (see [http://jquery.vostrel.cz/reel#syntax] (http://jquery.vostrel.cz/reel#syntax "JQuery Reel Parameters")
+2. Options for single gallery. Reel="1" replaces gallery with reel gallery if above option was not chosen, other parameters conform to JQuery Reel parameters (see [http://jquery.vostrel.cz/reel#syntax](http://jquery.vostrel.cz/reel#syntax)
 
 
 == Frequently Asked Questions ==
