@@ -31,7 +31,7 @@ To replace wordpress gallery with reel you need to add reel="1" to gallery short
 
 == Frequently Asked Questions ==
 
-= How to quickly create 360 rotating object to my site =
+= How to quickly add 360 rotating object to my site =
 
 Create gallery in your post or page containing frames for rotation and add reel="1" to gallery shortcode.
 
