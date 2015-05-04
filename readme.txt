@@ -58,5 +58,8 @@ By default width and height of first frame are used.
 
 == Changelog ==
 
+= 0.9 =
+* Add internationalization, russian language
+
 = 0.8 =
 * Initial release
