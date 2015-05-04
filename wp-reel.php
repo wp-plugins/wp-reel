@@ -82,10 +82,7 @@ function reel_gallery( $output, $attr ) {
 
 	// Initialize
 	global $post, $wp_locale;
-
-	// Gallery instance counter
-	static $instance = 0;
-	$instance++;
+    $return = $output;
 
 
 	if ( isset( $attr['orderby'] ) ) {
@@ -162,7 +159,8 @@ function reel_gallery( $output, $attr ) {
 		
 	), $attr ) );
 	
-	if (!get_option( 'wp_reel_setting_replace_gallery' , false ) && ($reel!="1")) return;
+	if (!get_option( 'wp_reel_setting_replace_gallery' , false ) && ($reel!="1")) return $return;
+	
 	// do not process non-reel gallery
 	// Initialize
 	$id = intval( $id );
@@ -192,7 +190,7 @@ function reel_gallery( $output, $attr ) {
 		$attachments = get_children( array( 'post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
 	}
 
-	if ( empty( $attachments ) ) return '';
+	if ( empty( $attachments ) ) return $return;
 
 	// Filter gallery differently for feeds
 	if ( is_feed() ) {
@@ -237,7 +235,7 @@ function reel_gallery( $output, $attr ) {
 	}
 
 	$output .= "' src='$imgurl' >";
-
+    
 	return $output;
 
 }
