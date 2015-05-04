@@ -11,7 +11,7 @@ Description: This plugin allows to replace WP gallery with <a href="http://jquer
 
 add_action('wp_enqueue_scripts', 'wp_reel_scripts');
 
-function get_match( $regex, $content ) {
+function wp_reel_get_match( $regex, $content ) {
     preg_match($regex, $content, $matches);
     return $matches[1];
 } 
@@ -81,7 +81,7 @@ function wp_reel_setting_callback_function_default_speed() {
 
 
 
-$shortcode_args = shortcode_parse_atts(get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
+$shortcode_args = shortcode_parse_atts(wp_reel_get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
 $reel=$shortcode_args["reel"];
 
 
