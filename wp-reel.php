@@ -11,10 +11,7 @@ Description: This plugin allows to replace WP gallery with <a href="http://jquer
 
 add_action('wp_enqueue_scripts', 'wp_reel_scripts');
 
-function wp_reel_get_match( $regex, $content ) {
-    preg_match($regex, $content, $matches);
-    return $matches[1];
-} 
+// Scripts initialization
 
 function wp_reel_scripts() {
 	if(!is_admin()) {
@@ -22,6 +19,8 @@ function wp_reel_scripts() {
 	wp_enqueue_script('reel', plugin_dir_url( __FILE__ ) .'js/jquery.reel-min.js', array('jquery'), '', true);
 	}
 }
+
+// Add custom settings via settings API
 
 function wp_reel_settings_api_init() {
 	// Add the section to media settings so we can add our
@@ -54,11 +53,12 @@ function wp_reel_settings_api_init() {
 	// our callback function just has to echo the <input>
     register_setting( 'media', 'wp_reel_setting_replace_gallery' );
     register_setting( 'media', 'wp_reel_setting_default_speed' );
-} // wp_reel_settings_api_init()
+}
+
 
 add_action( 'admin_init', 'wp_reel_settings_api_init' );
 
- 
+// WP Reel options on media settings
 
 function wp_reel_setting_section_callback_function() {
 	echo '<p>'.__('Options related to WP Reel plugin', 'wp-reel').'</p>';
@@ -76,16 +76,8 @@ function wp_reel_setting_callback_function_default_speed() {
 }
 
 
-//options/admin stuff
-
-
-
-
-$shortcode_args = shortcode_parse_atts(wp_reel_get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
-$reel=$shortcode_args["reel"];
-
-
 // Custom filter function to modify default gallery shortcode output
+
 function reel_gallery( $output, $attr ) {
 
 	// Initialize
