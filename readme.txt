@@ -16,7 +16,7 @@ WP Reel is an implementation of [JQuery Reel 360 Javascript player](http://jquer
 
 It allows to create interactive 360° object movie, panorama or stop-motion animation from wordpress gallery.
 
-You can see [live demo here] (http://altert.net/demo)
+You can see [live demo here](http://altert.net/demo)
 
 It follows MIT license that is used for JQuery Reel, so feel free to download, modify and work on it. 
 
