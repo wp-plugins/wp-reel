@@ -3,7 +3,7 @@ Contributors: altert
 Tags: gallery, 3d, 360, slideshow, reel, JQuery, animation, panorama
 Donate link: http://altert.net/demo/donate-wp-reel/
 Requires at least: 4.0.0
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: 0.9
 License: MIT License
 License URI: http://altert.net/MIT-LICENSE.txt
