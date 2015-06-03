@@ -4,7 +4,7 @@ Tags: gallery, 3d, 360, slideshow, reel, JQuery, animation, panorama
 Donate link: http://altert.net/demo/donate-wp-reel/
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.9
+Stable tag: 1.0
 License: MIT License
 License URI: http://altert.net/MIT-LICENSE.txt
 
@@ -59,6 +59,9 @@ By default width and height of first frame are used.
 
 
 == Changelog ==
+
+= 1.0 =
+* Fix for initial position for stitched panoramas
 
 = 0.9 =
 * Add internationalization, russian language

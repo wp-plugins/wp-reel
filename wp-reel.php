@@ -237,7 +237,8 @@ function reel_gallery( $output, $attr ) {
            $output.=" data-stitched='".$stitched."' data-image='";
            }
          }
-        if ($i==$frame) $imgurl=$image_attributes[0];
+        if (($images>1)&&($i==$frame)) $imgurl=$image_attributes[0];
+        elseif (($images==1)&&($i==1)) $imgurl=$image_attributes[0];
 		$output .= $image_attributes[0];
         if ($i<$images) $output.=",";
         
